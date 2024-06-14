@@ -1,28 +1,27 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
     color: #333;
-    line-height: 1.6;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: #fff;
     padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header .logo img {
-    height: 50px;
+.logo img {
+    height: 40px;
 }
 
-header h1 {
+h1 {
     margin: 0;
     font-size: 24px;
 }
@@ -37,18 +36,21 @@ header h1 {
     width: 25px;
     height: 3px;
     background-color: #fff;
-    margin: 4px 0;
+    margin: 3px 0;
 }
 
 .nav-menu {
+    display: none;
+    background-color: #0069D9;
+    color: #fff;
     position: absolute;
     top: 60px;
+    left: 0;
     right: 0;
-    background-color: #333;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .nav-menu ul {
@@ -58,127 +60,79 @@ header h1 {
 }
 
 .nav-menu li {
-    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #0056b3;
 }
 
-.nav-menu a {
-    display: block;
-    padding: 10px;
+.nav-menu li a {
     color: #fff;
     text-decoration: none;
 }
 
-.nav-menu a:hover {
-    background-color: #555;
-}
-
-.hidden {
-    display: none;
+.nav-menu.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-card, .tournament-card, .league-card, .news-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+    border-radius: 50%;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #007BFF;
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-#welcome-text {
-    font-size: 1.5em;
-    margin-top: 10px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-#teams-list, #tournaments-list, #leagues-list, #news-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 40px);
-    box-sizing: border-box;
-}
-
-.card img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.card h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-.card p {
-    margin-bottom: 10px;
-    color: #666;
-}
-
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    font-size: 1.5em;
 }
