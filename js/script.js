@@ -1,7 +1,7 @@
-// Toggle menu visibility
+// Toggle menu visibility with animation
 function toggleMenu() {
     const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.toggle('hidden');
+    navMenu.classList.toggle('visible');
 }
 
 // Function to load welcome text with animation
