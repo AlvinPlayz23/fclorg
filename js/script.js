@@ -25,8 +25,8 @@ async function fetchData(sheetId, query) {
 }
 
 async function initialize() {
-    const teamsSheetId = '11QkdTr062hCnWbS5P_WI36FE244-TkNzjbDMVcz06WQ';
-    const ovrSheetId = '1p8MmocAesqYHzORRy4xAxa6wDPnegYBVDnpXp0IjVJc';
+    const teamsSheetId = '2PACX-1vTljrUytTLqraazPmrhWPhHXa0GIGyC540ED9UZfdaHMtUxvqAisptUUHOBDBSi-nhpfAo1sLgURDEd';
+    const ovrSheetId = '2PACX-1vT8LVbRLyTkZczr7MNRxh4_ob9DdirI8q6JjJGu5S0NaufR-dzQtI6M1f_mXC8Sjt18oWtzPRM1NPUu';
     const tournamentsSheetId = 'YOUR_TOURNAMENT_SHEET_ID';
     const leaguesSheetId = 'YOUR_LEAGUE_SHEET_ID';
     const newsSheetId = 'YOUR_NEWS_SHEET_ID';
